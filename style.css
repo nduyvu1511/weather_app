@@ -1,0 +1,158 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 105%;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    background: url('./image/background-4.jpg') center/cover;
+    object-fit: cover;
+}
+
+.main-content {
+    padding: 32px;
+}
+
+.location-container {
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+.weather-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(81,95,48, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    justify-content:center;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 24px;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-wrap {
+    width: 40%;
+    position: relative;
+}
+
+.search-input {
+    --border-width: 2px;
+    height: 45px;
+    width: 100%;
+    background-color:transparent;
+    border: var(--border-width) solid white;
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    padding: 0 6px;
+    line-height: 45px;
+    font-size: 1.4rem;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 50%;
+    transform: translateY(50%);
+    height: calc(100% - 2px);
+    width: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+#country {
+    text-align: right;
+}
+
+.search-icon:hover{
+    background-color:white;
+}
+.search-icon:hover i  {
+    color: rgb(139, 198, 236);
+}
+
+.search-icon i {
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+}
+
+.temperature-form {
+    display: flex;
+}
+
+.temperature__degree-form {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.weather-icon {
+    width: 80px;
+}
+
+.others {
+    color: white;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    * {
+        font-size: 90%;
+    }
+    .search-wrap {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 80%;
+    }
+
+    .search-wrap {
+        width: 100%;
+    }
+    .location-container {
+        font-size: 2rem;
+    }
+    .main-content {
+        padding: 20px 10px;
+    }
+}
